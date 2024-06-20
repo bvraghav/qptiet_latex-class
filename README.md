@@ -12,6 +12,23 @@ The following example is a screenshot from
 
 ![](./images/sample.png)
 
+## Installation ##
+
+### CTAN ###
+
+TBA
+
+### From Source ###
+
+1. `tlmgr init-usertree`
+2. `kpsewhich -var-value=TEXMFHOME` should return
+   `~/texmf`
+3. `mkdir -p ~/texmf/tex/latex`
+4. `~/texmf/tex/latex`
+5. `git clone
+   git@github.com:bvraghav/qptiet_latex-class qptiet`
+6. Verify that `kpsewhich qptiet.cls` finds `qptiet.cls`.
+
 ## Usage ##
 
 ### Document Class ###

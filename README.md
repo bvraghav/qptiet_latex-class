@@ -24,7 +24,7 @@ TBA
 2. `kpsewhich -var-value=TEXMFHOME` should return
    `~/texmf`
 3. `mkdir -p ~/texmf/tex/latex`
-4. `~/texmf/tex/latex`
+4. `cd ~/texmf/tex/latex`
 5. `git clone
    git@github.com:bvraghav/qptiet_latex-class qptiet`
 6. Verify that `kpsewhich qptiet.cls` finds `qptiet.cls`.

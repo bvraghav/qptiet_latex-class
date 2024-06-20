@@ -1,0 +1,17 @@
+\documentclass{article}
+\usepackage{babel}
+\usepackage{geometry,parskip,color}
+\usepackage{lipsum}
+\usepackage{paracol}
+\begin{document}
+\columnratio{0.6}
+\begin{paracol}{2}
+\lipsum[1] \switchcolumn \color{red} 
+\lipsum[3] \switchcolumn \color{blue}
+\lipsum[4] \switchcolumn \color{green}
+\lipsum[5] \switchcolumn \color{green}
+\lipsum[6] \switchcolumn \color{magenta} % flow to the next page
+\lipsum[7] \switchcolumn \color{black} % flow to the next page
+\lipsum[8] 
+\end{paracol}
+\end{document}

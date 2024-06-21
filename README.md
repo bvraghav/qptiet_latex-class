@@ -125,7 +125,14 @@ Add the following to [the
 init-file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) 
 ```lisp
 (add-to-list 'org-latex-classes
-	     `("qptiet" "\\documentclass{qptiet}" nil))
+	     `("qptiet" "\\documentclass{qptiet}
+[NO-DEFAULT-PACKAGES]
+\\usepackage{amsmath}
+\\usepackage{graphicx}
+\\usepackage{wrapfig}
+\\usepackage{amssymb}
+\\usepackage[unicode]{hyperref}
+" nil))
 ```
 
 Here’s a [`sample-org`](./sample-org.org) file; that

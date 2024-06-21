@@ -123,7 +123,7 @@ implementation detail,
 ## Emacs Org Integration ##
 Add the following to [the
 init-file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) 
-```lisp
+```elisp
 (add-to-list 'org-latex-classes
 	     `("qptiet" "\\documentclass{qptiet}
 [NO-DEFAULT-PACKAGES]

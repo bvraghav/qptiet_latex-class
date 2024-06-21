@@ -129,4 +129,4 @@ init-file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.h
 ```
 
 Here’s a [`sample-org`](./sample-org.org) file; that
-produces a [`PDF`](./sampel-org.pdf)
+produces a [`PDF`](./sample-org.pdf)

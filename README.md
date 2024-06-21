@@ -1,5 +1,9 @@
 # `qptiet.cls` #
 
+[Installation](#installation) | 
+[Usage](#usage) | 
+[Emacs Org Integration](#emacs-org-integration)
+
 Provide a document class `qptiet` in order to create a
 question paper for [the Thapar
 Institute](https://thapar.edu/) in $\LaTeX$.  Although
@@ -115,3 +119,14 @@ implementation detail,
 % Skip line
 \bvrskipline[1][]{\vspace{#1\baselineskip}}
 ```
+
+## Emacs Org Integration ##
+Add the following to [the
+init-file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) 
+```lisp
+(add-to-list 'org-latex-classes
+	     `("qptiet" "\\documentclass{qptiet}" nil))
+```
+
+Here’s a [`sample-org`](./sample-org.org) file; that
+produces a [`PDF`](./sampel-org.pdf)

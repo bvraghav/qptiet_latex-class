@@ -121,7 +121,7 @@
    2. Given a geometry $G$, which is a standard unit
       cube scaled uniformly by half and viewed through
       a Cavelier projection bearing $\theta=\pi/4$
-      wrt. $X$-axis. \hfill [2 marks]
+      wrt. $X$ axis. \hfill [2 marks]
    3. Given a view coordinate system (VCS) with origin
       at $\textbf{p}_v$ and euler angles ZYX as
       $\boldsymbol{\theta}$ wrt. the world coordinate

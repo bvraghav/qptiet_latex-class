@@ -1,11 +1,17 @@
-# `qptiet.cls` #
+# `tiet-question-paper.cls` #
 
 [Installation](#installation) | 
 [Usage](#usage) | 
 [Emacs Org Integration](#emacs-org-integration)
 
-Provide a document class `qptiet` in order to create a
-question paper for [the Thapar
+Author: Raghav B. Venkataramaiyer  
+Email: bv.raghav -at- thapar -dot- edu  
+Email: bvraghav -at- gmail -dot- com  
+License: [MIT License](./LICENSE)  
+Version: 2024-06-22
+
+Provide a document class `tiet-question-paper` in order
+to create a question paper for [the Thapar
 Institute](https://thapar.edu/) in $\LaTeX$.  Although
 created for the TIET, the module, however, is adaptable
 to any organisation.
@@ -30,8 +36,8 @@ TBA
 3. `mkdir -p ~/texmf/tex/latex`
 4. `cd ~/texmf/tex/latex`
 5. `git clone
-   git@github.com:bvraghav/qptiet_latex-class qptiet`
-6. Verify that `kpsewhich qptiet.cls` finds `qptiet.cls`.
+   git@github.com:bvraghav/qptiet_latex-class tiet-question-paper`
+6. Verify that `kpsewhich tiet-question-paper.cls` finds `tiet-question-paper.cls`.
 
 ## Usage ##
 
@@ -41,7 +47,7 @@ The document class is based on `article`.  And all the
 options are passed forward as is.
 
 ```latex
-\documentclass[11pt,onecolumn]{qptiet}
+\documentclass[11pt,onecolumn]{tiet-question-paper}
 ```
 
 ### Title Block ###
@@ -50,6 +56,12 @@ Only the following macros contribute to the title block.
 
 ```latex
 \date{28 May 2024}
+% \institute{Thapar Institute of Engineering \&
+%   Technology}                   % Default value
+% \abbrevinst{\textsc{tiet}}      % Reserved for future
+% \instaddress{Patiala 147004}    % Reserved for future
+% \cohort{}                       % Reserved for future
+% \instlogo{images/tiet-logo.pdf} % Optional
 \schoolordepartment{Computer Science \& Engineering Department}
 \examname{End Semester Examination}
 \coursecode{UCS505}
@@ -125,7 +137,7 @@ Add the following to [the
 init-file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Init-File.html) 
 ```elisp
 (add-to-list 'org-latex-classes
-	     `("qptiet" "\\documentclass{qptiet}
+	     `("tiet-question-paper" "\\documentclass{tiet-question-paper}
 [NO-DEFAULT-PACKAGES]
 \\usepackage{amsmath}
 \\usepackage{graphicx}

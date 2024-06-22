@@ -1,5 +1,18 @@
+%% ----------------------------------------------------
+%% Latex class ‘tiet-question-paper’
+%%
+%% Author: Raghav B. Venkataramaiyer
+%% Email: bv.raghav -at- thapar -dot- edu
+%% Email: bvraghav -at- gmail -dot- com
+%% License: [MIT License](./LICENSE)
+%% Version: 2024-06-22
+%% ----------------------------------------------------
+
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{iitkthesis}[2020/11/26 IIT Thesis LaTeX class]
+
+\ProvidesClass%
+{tiet-question-paper}%
+[2024-06-22 TIET Question Paper class]
 
 %% -----------------------------------
 %% Parent Class
@@ -127,9 +140,9 @@
 \def\tiet@instaddress{Patiala 147004}
 \def\instaddress#1{\gdef\tiet@instaddress{#1}}
 
-% Variable: logo
-\def\tiet@logo{images/tiet-logo.pdf}
-\def\logo#1{\gdef\tiet@logo{#1}}
+% Variable: instlogo
+\let\tiet@instlogo\relax
+\def\instlogo#1{\gdef\tiet@instlogo{#1}}
 
 % Variable: schoolordepartment
 \let\tiet@schoolordepartment\relax
@@ -223,6 +236,33 @@
 % \setlist[qenum,2]{label=\alph*),before={},after={},first={}}
 % %% -----------------------------------
 
+
+%% -----------------------------------
+%% Write Examination Details and Draw Logo
+%% -----------------------------------
+
+\DeclareRobustCommand%
+% Write Examination Details
+\writeexamdetails{
+  \parbox[t][][t]{\linewidth}{\centering\large%
+    {\bfseries \tiet@institute\par}
+
+    \vspace*{0.2\baselineskip}
+    {\tiet@schoolordepartment}
+
+    \vspace*{0.2\baselineskip}
+    {\MakeUppercase\tiet@examname}}  
+}
+\DeclareRobustCommand%
+% Draw Logo
+\drawinstlogo{
+  \parbox[t][][t]{\linewidth}{\raggedright%
+    \includegraphics[width=11.5mm,valign=t]
+    {\tiet@instlogo}\par}
+}
+
+
+
 %% -----------------------------------
 %% Title Page
 %% -----------------------------------
@@ -239,26 +279,20 @@
     MM:\textbf{\tiet@maxmarks}}\\
   {\noindent Faculty: \tiet@faculty}
 
+
   \vspace*{\baselineskip}
-  \begin{tabularx}{\textwidth}{Xp{18mm}}
-    \parbox[t][][t]{\linewidth}{\centering\large%
-      {\bfseries \tiet@institute\par}
-
-      \vspace*{0.2\baselineskip}
-      {\tiet@schoolordepartment}
-
-      \vspace*{0.2\baselineskip}
-      {\MakeUppercase\tiet@examname}}
-    &\parbox[t][][t]{\linewidth}{\raggedright%
-      \includegraphics[width=11.5mm,valign=t]
-      {\tiet@logo}\par}
-  \end{tabularx}
+  \ifx\tiet@instlogo\@empty
+    \writeexamdetails
+  \else
+    \begin{tabularx}{\textwidth}{Xp{18mm}}
+      \writeexamdetails & \drawinstlogo
+    \end{tabularx}
+  \fi
 
   \par\rule{\textwidth}{0.4pt}
   \par\vspace*{0.5\baselineskip}
 }
 %% -----------------------------------
-
 
 %% -----------------------------------
 %% Counterlessfootnote

@@ -1,6 +1,6 @@
 #+date: \today
 
-#+latex_class: qptiet
+#+latex_class: tiet-question-paper
 #+latex_class_options: [11pt]
 #+options: num:nil toc:nil author:nil email:nil 
 
@@ -13,6 +13,7 @@
 
 #+latex_header_extra: \usepackage{libertinus}
 
+#+latex_header_extra: \instlogo{images/tiet-logo.pdf}
 #+latex_header_extra: \schoolordepartment{%
 #+latex_header_extra: Computer Science \& Engineering Department}
 #+latex_header_extra: \examname{End Semester Examination}

@@ -26,7 +26,19 @@ The following example is a screenshot from
 
 ### CTAN ###
 
-TBA
+```sh
+tlmgr --usermode --repository ctan install tiet-question-paper
+```
+
+In case there are errors like `pubkey missing`, or
+`backups folder not found`; Try the following (may
+require `root` permissions):
+1. `mkdir -p /usr/share/tlpkg/backups`
+2. `tlmgr --repository ctan update --self` 
+2. `tlmgr --repository ctan install texlive-scripts`
+
+And/ or (with local user login):
+1. `mkdir -p /home/bvraghav/texmf/tlpkg/backups`
 
 ### From Source ###
 
@@ -40,6 +52,10 @@ TBA
 6. Verify that `kpsewhich tiet-question-paper.cls` finds `tiet-question-paper.cls`.
 
 ## Usage ##
+
+## Overleaf Template ##
+
+TBA
 
 ### Document Class ###
 

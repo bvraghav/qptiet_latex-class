@@ -2,7 +2,8 @@
 
 [Installation](#installation) | 
 [Usage](#usage) | 
-[Emacs Org Integration](#emacs-org-integration)
+[Emacs Org Integration](#emacs-org-integration) |
+[[Overleaf Template](https://www.overleaf.com/latex/templates/tiet-question-paper-template/rwvynwxswntb)]
 
 Author: Raghav B. Venkataramaiyer  
 Email: bv.raghav -at- thapar -dot- edu  
@@ -52,10 +53,6 @@ And/ or (with local user login):
 6. Verify that `kpsewhich tiet-question-paper.cls` finds `tiet-question-paper.cls`.
 
 ## Usage ##
-
-### Overleaf Template ###
-
-TBA
 
 ### Document Class ###
 
